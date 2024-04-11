@@ -55,44 +55,44 @@ Exhaustive list of errors returned by celestia node/core/app when trying to subm
 
 ## cosmos-sdk
 
-`ErrTxDecode` - `tx parse error`
-`ErrInvalidSequence` - `invalid sequence`
-`ErrUnauthorized` - `unauthorized`
-`ErrInsufficientFunds` - `insufficient funds`
-`ErrUnknownRequest` - `unknown request`
-`ErrInvalidAddress` - `invalid address`
-`ErrInvalidPubKey` - `invalid pubkey`
-`ErrUnknownAddress` - `unknown address`
-`ErrInvalidCoins` - `invalid coins`
-`ErrOutOfGas` - `out of gas`
-`ErrMemoTooLarge` - `memo too large`
-`ErrInsufficientFee` - `insufficient fee`
-`ErrTooManySignatures` - `maximum number of signatures exceeded`
-`ErrNoSignatures` - `no signatures supplied`
-`ErrJSONMarshal` - `failed to marshal JSON bytes`
-`ErrJSONUnmarshal` - `failed to unmarshal JSON bytes`
-`ErrInvalidRequest` - `invalid request`
-`ErrTxInMempoolCache` - `tx already in mempool`
-`ErrMempoolIsFull` - `mempool is full`
-`ErrTxTooLarge` - `tx too large`
-`ErrKeyNotFound` - `key not found`
-`ErrWrongPassword` - `invalid account password`
-`ErrorInvalidSigner` - `tx intended signer does not match the given signer`
-`ErrorInvalidGasAdjustment` - `invalid gas adjustment`
-`ErrInvalidHeight` - `invalid height`
-`ErrInvalidVersion` - `invalid version`
-`ErrInvalidChainID` - `invalid chain-id`
-`ErrInvalidType` - `invalid type`
-`ErrTxTimeoutHeight` - `tx timeout height`
-`ErrUnknownExtensionOptions` - `unknown extension options`
-`ErrWrongSequence` - `incorrect account sequence`
-`ErrPackAny` - `failed packing protobuf message to Any`
-`ErrUnpackAny` - `failed unpacking protobuf message from Any`
-`ErrLogic` - `internal logic error`
-`ErrConflict` - `conflict`
-`ErrNotSupported` - `feature not supported`
-`ErrNotFound` - `not found`
-`ErrIO` - `Internal IO error`
-`ErrAppConfig` - `error in app.toml`
-`ErrInvalidGasLimit` - `invalid gas limit`
-`ErrPanic` - errorsmod.ErrPanic
+- `ErrTxDecode` - `tx parse error`
+- `ErrInvalidSequence` - `invalid sequence`
+- `ErrUnauthorized` - `unauthorized`
+- `ErrInsufficientFunds` - `insufficient funds`
+- `ErrUnknownRequest` - `unknown request`
+- `ErrInvalidAddress` - `invalid address`
+- `ErrInvalidPubKey` - `invalid pubkey`
+- `ErrUnknownAddress` - `unknown address`
+- `ErrInvalidCoins` - `invalid coins`
+- `ErrOutOfGas` - `out of gas`
+- `ErrMemoTooLarge` - `memo too large`
+- `ErrInsufficientFee` - `insufficient fee`
+- `ErrTooManySignatures` - `maximum number of signatures exceeded`
+- `ErrNoSignatures` - `no signatures supplied`
+- `ErrJSONMarshal` - `failed to marshal JSON bytes`
+- `ErrJSONUnmarshal` - `failed to unmarshal JSON bytes`
+- `ErrInvalidRequest` - `invalid request`
+- `ErrTxInMempoolCache` - `tx already in mempool`
+- `ErrMempoolIsFull` - `mempool is full`
+- `ErrTxTooLarge` - `tx too large`
+- `ErrKeyNotFound` - `key not found`
+- `ErrWrongPassword` - `invalid account password`
+- `ErrorInvalidSigner` - `tx intended signer does not match the given signer`
+- `ErrorInvalidGasAdjustment` - `invalid gas adjustment`
+- `ErrInvalidHeight` - `invalid height`
+- `ErrInvalidVersion` - `invalid version`
+- `ErrInvalidChainID` - `invalid chain-id`
+- `ErrInvalidType` - `invalid type`
+- `ErrTxTimeoutHeight` - `tx timeout height`
+- `ErrUnknownExtensionOptions` - `unknown extension options`
+- `ErrWrongSequence` - `incorrect account sequence`
+- `ErrPackAny` - `failed packing protobuf message to Any`
+- `ErrUnpackAny` - `failed unpacking protobuf message from Any`
+- `ErrLogic` - `internal logic error`
+- `ErrConflict` - `conflict`
+- `ErrNotSupported` - `feature not supported`
+- `ErrNotFound` - `not found`
+- `ErrIO` - `Internal IO error`
+- `ErrAppConfig` - `error in app.toml`
+- `ErrInvalidGasLimit` - `invalid gas limit`
+- `ErrPanic` - errorsmod.ErrPanic
