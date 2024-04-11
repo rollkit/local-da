@@ -17,7 +17,7 @@ should output
 2024/04/11 12:23:34 Listening on: localhost:7980
 ```
 
-Which exposes the [go-da] interface over JSONRPC and can be accessed with a http client like [xh][xh]:
+Which exposes the [go-da] interface over JSONRPC and can be accessed with a HTTP client like [xh][xh]:
 
 ### MaxBlobSize
 
