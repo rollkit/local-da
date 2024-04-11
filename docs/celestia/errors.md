@@ -11,22 +11,36 @@ Exhaustive list of errors returned by celestia node/core/app when trying to subm
 
 ## celestia-app
 
+- `ErrReservedNamespace` - `cannot use reserved namespace IDs`
+- `ErrInvalidNamespaceLen` - `invalid namespace length`
+- `ErrInvalidDataSize` - `data must be multiple of shareSize`
+- `ErrBlobSizeMismatch` - `actual blob size differs from that specified in the MsgPayForBlob`
+- `ErrCommittedSquareSizeNotPowOf2` - `committed to invalid square size: must be power of two`
+- `ErrCalculateCommitment` - `unexpected error calculating commitment for share`
+- `ErrInvalidShareCommitment` - `invalid commitment for share`
+- `ErrParitySharesNamespace` - `cannot use parity shares namespace ID`
+- `ErrTailPaddingNamespace` - `cannot use tail padding namespace ID`
+- `ErrTxNamespace` - `cannot use transaction namespace ID`
+- `ErrInvalidShareCommitments` - `invalid share commitments: all relevant square sizes must be committed to`
+- `ErrUnsupportedShareVersion` - `unsupported share version`
+- `ErrZeroBlobSize` - `cannot use zero blob size`
+- `ErrMismatchedNumberOfPFBorBlob` - `mismatched number of blobs per MsgPayForBlob`
+- `ErrNoPFB` - `no MsgPayForBlobs found in blob transaction`
+- `ErrNamespaceMismatch` - `namespace of blob and its respective MsgPayForBlobs differ`
+- `ErrProtoParsing` - `failure to parse a transaction from its protobuf representation`
+- `ErrMultipleMsgsInBlobTx` - `not yet supported: multiple sdk.Msgs found in BlobTx`
+- `ErrMismatchedNumberOfPFBComponent` - `number of each component in a MsgPayForBlobs must be identical`
+- `ErrNoBlobs` - `no blobs provided`
+- `ErrNoNamespaces` - `no namespaces provided`
+- `ErrNoShareVersions` - `no share versions provided`
+- `ErrNoBlobSizes` - `no blob sizes provided`
+- `ErrNoShareCommitments` - `no share commitments provided`
+- `ErrInvalidNamespace` - `invalid namespace`
+- `ErrInvalidNamespaceVersion` - `invalid namespace version`
+- `ErrTotalBlobSizeTooLarge` - `total blob size too large`
 - `AnteHandle` -  `errors.Wrap(sdkerrors.ErrInsufficientFee, "not enough gas to pay for blobs")`
 - `checkTxFeeWithValidatorMinGasPrices` - `errors.Wrap(sdkerror.ErrTxDecode, "Tx must be a FeeTx")`
-- `ValidateBasic` - `ErrNoNamespaces`
-- `ValidateBasic` - `ErrNoShareVersions`
-- `ValidateBasic` - `ErrNoBlobSizes`
-- `ValidateBasic` - `ErrNoShareCommitments`
-- `ValidateBasic` - `ErrInvalidNamespace`
-- `ValidateBasic` - `ErrUnsupportedShareVersion`
-- `ValidateBasic` - `ErrInvalidShareCommitment`
-- `ValidateBasic` - `ErrMismatchedNumberOfPFBComponent.Wrapf("namespaces %d blob sizes %d share versions %d share commitments %d)`
-- `ValidateBlobNamespace` - `ErrReservedNamespace`
-- `ValidateBlobNamespace` - `ErrInvalidNamespaceVersion`
 - `ValidateBlobs` - `namespace version %d is too large`
-- `ValidateBlobs` - `ErrNoBlobs`
-- `ValidateBlobs` - `ErrZeroBlobSize`
-- `ValidateBlobs` - `ErrUnsupportedShareVersion`
 - `ParseInsufficientMinGasPrice` - `parsing insufficient min gas price error`
 - `ParseInsufficientMinGasPrice` - `unexpected case: required gas price is zero`
 
