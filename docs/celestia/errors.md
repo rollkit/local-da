@@ -28,7 +28,7 @@ Exhaustive list of errors returned by celestia node/core/app when trying to subm
 - `ValidateBlobs` - `ErrZeroBlobSize`
 - `ValidateBlobs` - `ErrUnsupportedShareVersion`
 - `ParseInsufficientMinGasPrice` - `parsing insufficient min gas price error`
-- `ParseInsufficientMinGasPrice` - `unexpected case: required gas price is zer`
+- `ParseInsufficientMinGasPrice` - `unexpected case: required gas price is zero`
 
 ## celestia-core
 

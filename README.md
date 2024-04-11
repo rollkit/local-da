@@ -2,7 +2,7 @@
 
 Mock DA implements the [go-da][go-da] interface over a mock Data Availability service.
 
-It is intended to be used for testing DA layers without having to setup the actual services.
+It is intended to be used for testing DA layers without having to set up the actual services.
 
 ## Usage
 
@@ -74,7 +74,7 @@ output:
 ## References
 
 [1] [go-da][go-da]
-[1] [xh][xh]
+[2] [xh][xh]
 
 [go-da]: https://github.com/rollkit/go-da
 [xh]: https://github.com/ducaale/xh
