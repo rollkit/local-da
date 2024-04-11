@@ -1,14 +1,15 @@
-## Celestia Node/Core/App Errors
+# Celestia Node/Core/App Errors
 
 Exhaustive list of errors returned by celestia node/core/app when trying to submit a PFB transaction. There might be a few duplicates because some errors like `sdkerrors` are wrapped in celestia-app.
 
-### celestia-node:
+## celestia-node
+
 - `SubmitPayForBlob` - `state: no blobs provided`
 - `SubmitPayForBlob` - `parsing insufficient min gas price error`
 - `SubmitPayForBlob` - `sdkErrors.ABCIError`
 - `SubmitPayForBlob` - `failed to submit blobs after %d attempts: %w`
 
-### celestia-app:
+## celestia-app
 
 - `AnteHandle` -  `errors.Wrap(sdkerrors.ErrInsufficientFee, "not enough gas to pay for blobs")`
 - `checkTxFeeWithValidatorMinGasPrices` - `errors.Wrap(sdkerror.ErrTxDecode, "Tx must be a FeeTx")`
@@ -29,7 +30,7 @@ Exhaustive list of errors returned by celestia node/core/app when trying to subm
 - `ParseInsufficientMinGasPrice` - `parsing insufficient min gas price error`
 - `ParseInsufficientMinGasPrice` - `unexpected case: required gas price is zer`
 
-### celestia-core:
+## celestia-core
 
 - `BroadcastTxCommit` - `ErrTimedOutWaitingForTx` - `timed out waiting for tx to be included in a block`
 - `BroadcastTxCommit` - `max_subscription_clients %d reached`
@@ -52,7 +53,7 @@ Exhaustive list of errors returned by celestia node/core/app when trying to subm
 - `TryAddNewTx` - `application rejected transaction with code %d (Log: %s)`
 - `TryAddNewTx` - `rejected bad transaction after post check: %w`
 
-### cosmos-sdk:
+## cosmos-sdk
 
 `ErrTxDecode` - `tx parse error`
 `ErrInvalidSequence` - `invalid sequence`
