@@ -1,3 +1,4 @@
+LDFLAGS=-ldflags="-X '$(versioningPath).buildTime=$(shell date)' -X '$(versioningPath).lastCommit=$(shell git rev-parse HEAD)' -X '$(versioningPath).semanticVersion=$(shell git describe --tags --dirty=-dev 2>/dev/null || git rev-parse --abbrev-ref HEAD)'"
 DOCKER := $(shell which docker)
 DOCKER_BUF := $(DOCKER) run --rm -v $(CURDIR):/workspace --workdir /workspace bufbuild/buf
 
@@ -6,6 +7,12 @@ DOCKER_BUF := $(DOCKER) run --rm -v $(CURDIR):/workspace --workdir /workspace bu
 pkgs := $(shell go list ./...)
 run := .
 count := 1
+
+## build: Build mock-da binary.
+build:
+	@echo "--> Building mock-da"
+	@go build -o build/ ${LDFLAGS} ./...
+.PHONY: build
 
 ## help: Show this help message
 help: Makefile
@@ -54,7 +61,7 @@ fmt:
 .PHONY: fmt
 
 ## vet: Run go vet
-vet: 
+vet:
 	@echo "--> Running go vet"
 	@go vet $(pkgs)
 .PHONY: vet
