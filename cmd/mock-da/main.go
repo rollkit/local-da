@@ -5,7 +5,6 @@ import (
 	"flag"
 	"fmt"
 	"log"
-	"net/url"
 	"os"
 	"os/signal"
 	"syscall"
@@ -15,19 +14,24 @@ import (
 )
 
 const (
-	// MockDAAddress is the mock address for the gRPC server
-	MockDAAddress = "grpc://localhost:7980"
+	defaultHost = "localhost"
+	defaultPort = "7980"
 )
 
 func main() {
 	var (
-		host string
-		port string
+		host      string
+		port      string
+		listenAll bool
 	)
-	addr, _ := url.Parse(MockDAAddress)
-	flag.StringVar(&port, "port", addr.Port(), "listening port")
-	flag.StringVar(&host, "host", addr.Hostname(), "listening address")
+	flag.StringVar(&port, "port", defaultPort, "listening port")
+	flag.StringVar(&host, "host", defaultHost, "listening address")
+	flag.BoolVar(&listenAll, "listen-all", false, "listen on all network interfaces (0.0.0.0) instead of just localhost")
 	flag.Parse()
+
+	if listenAll {
+		host = "0.0.0.0"
+	}
 
 	srv := proxy.NewServer(host, port, goDATest.NewDummyDA())
 	log.Printf("Listening on: %s:%s", host, port)
