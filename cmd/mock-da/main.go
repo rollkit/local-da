@@ -15,16 +15,25 @@ import (
 )
 
 const (
-	// MockDAAddress is the mock address for the gRPC server
-	MockDAAddress = "grpc://localhost:7980"
+	// MockDAPort is the port used for the mock DA gRPC server
+	MockDAPort = 7980
 )
+
+var listenAll = flag.Bool("listen-all", false, "Listen on all network interfaces (0.0.0.0) instead of just localhost")
 
 func main() {
 	var (
 		host string
 		port string
 	)
-	addr, _ := url.Parse(MockDAAddress)
+	flag.Parse()
+        ip := "localhost"
+        if *listenAll {
+            ip = "0.0.0.0"
+        }
+	address := fmt.Sprintf("grpc://%s:%d", ip, MockDAPort)
+
+	addr, _ := url.Parse(address)
 	flag.StringVar(&port, "port", addr.Port(), "listening port")
 	flag.StringVar(&host, "host", addr.Hostname(), "listening address")
 	flag.Parse()
