@@ -66,6 +66,7 @@ Exhaustive list of errors returned by celestia node/core/app when trying to subm
 - `TryAddNewTx` - `mem.proxyAppConn.Error()`
 - `TryAddNewTx` - `application rejected transaction with code %d (Log: %s)`
 - `TryAddNewTx` - `rejected bad transaction after post check: %w`
+- `TxSearch` - `transaction indexing is disabled`
 
 ## cosmos-sdk
 
