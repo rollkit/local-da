@@ -8,9 +8,9 @@ pkgs := $(shell go list ./...)
 run := .
 count := 1
 
-## build: Build mock-da binary.
+## build: Build local-da binary.
 build:
-	@echo "--> Building mock-da"
+	@echo "--> Building local-da"
 	@go build -o build/ ${LDFLAGS} ./...
 .PHONY: build
 

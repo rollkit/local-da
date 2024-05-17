@@ -1,6 +1,6 @@
-# Mock DA
+# Local DA
 
-Mock DA implements the [go-da][go-da] interface over a mock Data Availability service.
+Local DA implements the [go-da][go-da] interface over a Local Data Availability service.
 
 It is intended to be used for testing DA layers without having to set up the actual services.
 
@@ -8,7 +8,7 @@ It is intended to be used for testing DA layers without having to set up the act
 
 ```sh
 make build
-./mock-da
+./local-da
 ```
 
 should output
