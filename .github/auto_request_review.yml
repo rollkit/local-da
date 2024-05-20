@@ -1,21 +1,13 @@
 reviewers:
   defaults:
-    - code-owners
+    - core
   groups:
-    code-owners:
-      - Nashqueue
-      - tzdybal
-      - gupadhyaya
-    rollkit:
-      - Manav-Aggarwal
-      - S1nus
-      - tuxcanfly
-    celestia:
-      - team:celestia
+    core:
+      - team:core
 files:
-  '**':
-    - code-owners
-    - rollkit
+  '.github/**':
+    - MSevey
+    - core
 options:
   ignore_draft: true
   ignored_keywords:
