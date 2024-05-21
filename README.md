@@ -8,7 +8,7 @@ It is intended to be used for testing DA layers without having to set up the act
 
 ```sh
 make build
-./local-da
+./build/local-da
 ```
 
 should output
@@ -22,7 +22,7 @@ Which exposes the [go-da] interface over JSONRPC and can be accessed with an HTT
 You can also run local-da with a `-listen-all` flag which will make the process listen on 0.0.0.0 so that it can be accessed from other machines.
 
 ```sh
-$ ./local-da -listen-all
+$ ./build/local-da -listen-all
 2024/04/11 12:23:34 Listening on: 0.0.0.0:7980
 ```
 
