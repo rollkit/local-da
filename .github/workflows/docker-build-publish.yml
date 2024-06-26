@@ -1,0 +1,26 @@
+name: docker-build-publish
+
+# Trigger on all push events, new semantic version tags, and all PRs
+on:
+  push:
+    branches:
+      - "main"
+      - "v[0-9].[0-9].x"
+      - "v[0-9].[0-9][0-9].x"
+      - "v[0-9].x"
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+"
+      - "v[0-9]+.[0-9]+.[0-9]+-alpha.[0-9]+"
+      - "v[0-9]+.[0-9]+.[0-9]+-beta.[0-9]+"
+      - "v[0-9]+.[0-9]+.[0-9]+-rc[0-9]+"
+  pull_request:
+
+jobs:
+  docker-build:
+    permissions:
+      contents: write
+      packages: write
+    uses: rollkit/.github/.github/workflows/reusable_dockerfile_pipeline.yml@update-docker
+    with:
+      dockerfile: Dockerfile
+    secrets: inherit
