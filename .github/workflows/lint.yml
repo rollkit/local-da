@@ -41,3 +41,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: rollkit/.github/.github/actions/markdown-lint@v0.4.1
+
+  dockerfile-lint:
+    uses: rollkit/.github/.github/workflows/reuseable_dockerfile_lint.yml
+    with:
+      failure-threshold: "error"
