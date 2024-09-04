@@ -13,7 +13,7 @@ def run(plan):
     local_da = plan.add_service(
         name="local-da",
         config=ServiceConfig(
-            image="ghcr.io/rollkit/local-da:v0.2.1",
+            image="ghcr.io/rollkit/local-da:v0.3.1",
             ports=local_da_ports,
             public_ports=local_da_ports,
         ),
