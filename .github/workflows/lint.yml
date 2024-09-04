@@ -43,6 +43,6 @@ jobs:
       - uses: rollkit/.github/.github/actions/markdown-lint@v0.4.1
 
   dockerfile-lint:
-    uses: rollkit/.github/.github/workflows/reuseable_dockerfile_lint.yml@v0.4.1
+    uses: rollkit/.github/.github/workflows/reusable_dockerfile_lint.yml@v0.4.1
     with:
       failure-threshold: "error"
