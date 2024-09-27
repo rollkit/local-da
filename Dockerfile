@@ -9,7 +9,7 @@ RUN go mod tidy -compat=1.19 && \
     go build /src/cmd/local-da/main.go
 
 # Final image
-FROM alpine:3.18.3
+FROM alpine:3.20.3
 
 WORKDIR /root
 
