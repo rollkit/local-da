@@ -2,7 +2,7 @@ module github.com/rollkit/template-da-repo
 
 go 1.21.1
 
-require github.com/rollkit/go-da v0.7.0
+require github.com/rollkit/go-da v0.8.0
 
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
