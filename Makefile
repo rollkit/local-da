@@ -14,6 +14,12 @@ build:
 	@go build -o build/ ${LDFLAGS} ./...
 .PHONY: build
 
+## docker-build: Build local-da docker image.
+docker-build:
+	@echo "--> Building local-da docker image"
+	@docker build -t local-da .
+.PHONY: docker-build
+
 ## help: Show this help message
 help: Makefile
 	@echo " Choose a command run in "$(PROJECTNAME)":"

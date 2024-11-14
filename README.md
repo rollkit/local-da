@@ -6,6 +6,10 @@ It is intended to be used for testing DA layers without having to set up the act
 
 ## Usage
 
+### local-da binary
+
+To build and run the local-da binary:
+
 ```sh
 make build
 ./build/local-da
@@ -24,6 +28,15 @@ You can also run local-da with a `-listen-all` flag which will make the process 
 ```sh
 $ ./build/local-da -listen-all
 2024/04/11 12:23:34 Listening on: 0.0.0.0:7980
+```
+
+### Docker
+
+You can also run the local-da service using docker:
+
+```sh
+make docker-build
+docker run --rm -p 7980:7980 local-da
 ```
 
 ### MaxBlobSize

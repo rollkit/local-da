@@ -18,4 +18,5 @@ COPY --from=build-env /src/main /usr/bin/local-da
 
 EXPOSE 7980
 
-CMD ["local-da", "-listen-all"]
+ENTRYPOINT ["local-da"]
+CMD ["-listen-all"]
